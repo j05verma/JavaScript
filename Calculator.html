@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid black;
+            text-align: center;
+            background-color: hotpink;
+            margin: auto;   
+        }
+        h1{
+            border-radius: 10%;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Calculator</h1>
+        <label for="">Number1</label>
+        <input type="text" id="input1" placeholder="number">
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+
+        <br><br><br>
+        <label for="">Number2</label>
+        <input type="text" id="input2" placeholder="number">
+        <button onclick="div()">/</button>
+
+        <button onclick="mul()">*</button>
+        <br><br><br>
+
+        <label for="">Result</label>
+        <input type="text" id="output" placeholder="result">
+        <button onclick="clr()">clear</button>
+    </div>
+    <script>
+        function add()
+        {
+        x=document.getElementById("input1").value
+        y=document.getElementById("input2").value
+        z=parseInt(x)+parseInt(y)
+        document.getElementById("output").value=z
+        }
+        function sub()
+        {
+            x=document.getElementById("input1").value
+            y=document.getElementById("input2").value
+            z=parseInt(x) - parseInt(y)
+            document.getElementById("output").value=z
+        }
+        function mul()
+        {
+            x=document.getElementById("input1").value
+            y=document.getElementById("input2").value
+            z=parseInt(x)*parseInt(y)
+            document.getElementById("output").value=z
+        }
+        function div()
+        {
+            x=document.getElementById("input1").value
+            y=document.getElementById("input2").value
+            z=parseInt(x)/parseInt(y)
+            document.getElementById("output").value=z
+        }
+        function clr()
+        {
+            document.getElementById("input1").value=" "
+            document.getElementById("input2").value=" "
+            document.getElementById("output").value=" "
+        }
+
+
+    </script>
+    
+</body>
+</html>
