@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">User Name</label>
+    <input type="text" id="name" placeholder="username">
+    <br><br>
+    <label for="">phone number</label>
+    <input type="text" id="phone" placeholder="number">
+    <br><br>
+    <button onclick="display()">send otp</button>
+    <div id="output">
+
+    </div>
+
+    <script>
+        function display()
+        {
+            var x= Math.random()*(9999-1000)+1000
+           // console.log(x)
+            var otp= Math.floor(x)
+            console.log(otp)
+            var name=document.getElementById("name").value
+            var phone=document.getElementById("phone").value
+            document.getElementById("output").innerHTML="dear " +name+" customer your otp is "+otp+" for your number " +phone
+        }
+    </script> 
+    
+</body>
+</html>
